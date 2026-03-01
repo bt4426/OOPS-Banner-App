@@ -1,21 +1,19 @@
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        printBanner();
-    }
 
-    public static void printBanner() {
-
-        // UC4 Implementation using Array and Loop
+        // UC5: Inline Array Initialization using String.join()
         String[] banner = {
-
-            "  OOO     OOO    PPPPP    SSSSS ",
-            " O   O   O   O   P    P  S      ",
-            " O   O   O   O   PPPPP    SSSSS ",
-            " O   O   O   O   P            S ",
-            "  OOO     OOO    P       SSSSS  "
+                String.join(" ", "*   *", "*   *", "*****", "*****"),
+                String.join(" ", "*   *", "*   *", "*   *", "*   *"),
+                String.join(" ", "*   *", "*   *", "*****", "*****"),
+                String.join(" ", "*   *", "*   *", "*     ", "    *"),
+                String.join(" ", " *** ", " *** ", "*****", "*****"),
+                String.join(" ", "     ", "     ", "     ", "     "),
+                String.join(" ", "*     ", "*   *", "*****", "*****")
         };
 
+        // Enhanced For Loop
         for (String line : banner) {
             System.out.println(line);
         }
