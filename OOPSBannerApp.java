@@ -1,25 +1,74 @@
 /**
- * OOPSBannerApp - UC2: Render OOPS Banner
+ * OOPSBannerApp - UC3: Render OOPS Banner using String.join()
  *
- * This class displays the word "OOPS" in large banner
- * format using asterisks (*) and spaces.
+ * This version refactors UC2 implementation by replacing
+ * string concatenation (+) with String.join() method.
+ *
+ * Benefits:
+ * - Reduces intermediate String object creation
+ * - Improves memory efficiency
+ * - Enhances readability
  *
  * @author Tharun
- * @version 2.0
+ * @version 3.0
  */
 
 public class OOPSBannerApp {
 
+    // Static method to print OOPS banner
+    public static void printBanner() {
+
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                " *****  ",
+                " *****  "
+        ));
+
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*     * "
+        ));
+
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "*     * "
+        ));
+
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                " *****  "
+        ));
+
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "      * "
+        ));
+
+        System.out.println(String.join(" ",
+                "*     * ",
+                "*     * ",
+                "*     * ",
+                "      * "
+        ));
+
+        System.out.println(String.join(" ",
+                " *****  ",
+                " *****  ",
+                " *****  ",
+                " *****  "
+        ));
+    }
+
     public static void main(String[] args) {
-
-        // Letter O
-        System.out.println(" *****    *****    *****   ***** ");
-        System.out.println("*     *  *     *  *     *  *     *");
-        System.out.println("*     *  *     *  *     *  *     *");
-        System.out.println("*     *  *     *  *     *  ***** ");
-        System.out.println("*     *  *     *  *     *        *");
-        System.out.println("*     *  *     *  *     *        *");
-        System.out.println(" *****    *****    *****   ***** ");
-
+        printBanner();
     }
 }
