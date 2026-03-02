@@ -1,20 +1,59 @@
 public class OOPSBannerApp {
-    public static void main(String[] args) {
-        // UC5: Inline Array Initialization using String.join()
-        // This replaces separate population statements for a cleaner look.
-        String[] lines = {
-            String.join("  ", "*** ", " *** ", " *** ", " **** "),
-            String.join("  ", "* *", "* *", "* *", "* "),
-            String.join("  ", "* *", "* *", "* *", "* "),
-            String.join("  ", "* *", "* *", "* *", " *** "),
-            String.join("  ", "* *", "* *", "* *", "    *"),
-            String.join("  ", "* *", "* *", "* *", "    *"),
-            String.join("  ", "*** ", " *** ", " *** ", "**** ")
-        };
 
-        // Use an enhanced for-loop to print the banner
-        for (String line : lines) {
-            System.out.println(line);
+    // Helper method to generate the pattern for 'O'
+    public static String[] getOPattern() {
+        return new String[] {
+            " *** ",
+            "* *",
+            "* *",
+            "* *",
+            "* *",
+            "* *",
+            " *** "
+        };
+    }
+
+    // Helper method to generate the pattern for 'P'
+    public static String[] getPPattern() {
+        return new String[] {
+            "**** ",
+            "* *",
+            "* *",
+            "**** ",
+            "* ",
+            "* ",
+            "* "
+        };
+    }
+
+    // Helper method to generate the pattern for 'S'
+    public static String[] getSPattern() {
+        return new String[] {
+            " **** ",
+            "* ",
+            "* ",
+            " *** ",
+            "    * ",
+            "    * ",
+            "**** "
+        };
+    }
+
+    public static void main(String[] args) {
+        // Fetch patterns using helper methods
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+
+        // Print the banner "OOPS" using a loop
+        // We combine the strings row by row (7 rows total)
+        for (int i = 0; i < 7; i++) {
+            System.out.println(
+                oPattern[i] + "  " + 
+                oPattern[i] + "  " + 
+                pPattern[i] + "  " + 
+                sPattern[i]
+            );
         }
     }
 }
