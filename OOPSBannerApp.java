@@ -1,59 +1,52 @@
 public class OOPSBannerApp {
 
-    // Helper method to generate the pattern for 'O'
+    // 1. Define separate static methods for each character pattern
     public static String[] getOPattern() {
         return new String[] {
-            " *** ",
-            "* *",
-            "* *",
-            "* *",
-            "* *",
-            "* *",
-            " *** "
+            "  *** ",
+            " * * ",
+            " * * ",
+            " * * ",
+            " * * ",
+            " * * ",
+            "  *** "
         };
     }
 
-    // Helper method to generate the pattern for 'P'
     public static String[] getPPattern() {
         return new String[] {
-            "**** ",
-            "* *",
-            "* *",
-            "**** ",
-            "* ",
-            "* ",
-            "* "
+            " **** ",
+            " * * ",
+            " * * ",
+            " **** ",
+            " * ",
+            " * ",
+            " * "
         };
     }
 
-    // Helper method to generate the pattern for 'S'
     public static String[] getSPattern() {
         return new String[] {
-            " **** ",
-            "* ",
-            "* ",
-            " *** ",
-            "    * ",
-            "    * ",
-            "**** "
+            "  **** ",
+            " * ",
+            " * ",
+            "  *** ",
+            "     * ",
+            "     * ",
+            " **** "
         };
     }
 
     public static void main(String[] args) {
-        // Fetch patterns using helper methods
+        // 2. Call the methods to get the patterns
         String[] oPattern = getOPattern();
         String[] pPattern = getPPattern();
         String[] sPattern = getSPattern();
 
-        // Print the banner "OOPS" using a loop
-        // We combine the strings row by row (7 rows total)
+        // 3. Use a loop to assemble and print each line of the banner
         for (int i = 0; i < 7; i++) {
-            System.out.println(
-                oPattern[i] + "  " + 
-                oPattern[i] + "  " + 
-                pPattern[i] + "  " + 
-                sPattern[i]
-            );
+            // We print O, O, P, and S side-by-side
+            System.out.println(oPattern[i] + "  " + oPattern[i] + "  " + pPattern[i] + "  " + sPattern[i]);
         }
     }
 }
